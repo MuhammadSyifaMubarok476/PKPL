@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Sewa Villa</title>
+    <link rel="stylesheet" href="styleS.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulir Sewa Villa</h1>
+        <h2>FunVilla Malang.com</h2>
+        <form id="rentalForm">
+            <label for="nama">Nama Pemesan (Sesuai KTP):</label>
+            <input type="text" id="nama" name="nama" required><br>
+
+            <label for="no_hp">No HP:</label>
+            <input type="text" id="no_hp" name="no_hp" pattern="\d{11,12}" required><br>
+
+            <label for="no_hp_darurat">No HP Darurat:</label>
+            <input type="text" id="no_hp_darurat" name="no_hp_darurat" pattern="\d{11,12}" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" pattern=".+@gmail\.com" required><br>
+
+            <label for="Villa">Pilih Villa:</label>
+            <select id="Villa" name="Villa" required>
+                <option value="" disabled selected>Pilih Villa</option>
+                <option value="Villa Kimabe (Rp 1.500.000 - 2.000.000 /Malam, Max 50 orang)">Villa Kimabe (Rp 1.500.000 - 2.000.000 /Malam, Max 50 orang)</option>
+                <option value="Villa Alam Indah (Rp 990.000 - 1.500.000 /Malam, Max 30 orang)">Villa Alam Indah (Rp 990.000 - 1.500.000 /Malam, Max 30 orang)</option>
+                <option value="Villa Boko Haram (Rp 1.000.000 - 2.500.000 /Malam, Max 43 orang)">Villa Boko Haram (Rp 1.000.000 - 2.500.000 /Malam, Max 43 orang)</option>
+                <option value="Villa Raniah (Rp 1.500.000 - 2.000.000 /Malam, Max 30 orang)">Villa Raniah (Rp 1.500.000 - 2.000.000 /Malam, Max 30 orang)</option>
+            </select><br>
+
+            <label for="durasi">Durasi Sewa (1-7 Malam):</label>
+            <input type="number" id="durasi" name="durasi" min="1" max="7" required><br>
+
+            <label for="tanggal_ambil">Tanggal Cek In (12.00 WIB):</label>
+            <input type="date" id="tanggal_ambil" name="tanggal_ambil" required><br>
+
+            <label for="tanggal_kembali">Tanggal Cek Out (11.00 WIB):</label>
+            <input type="date" id="tanggal_kembali" name="tanggal_kembali" required><br>
+
+            <label for="jaminan">Pilih Jaminan:</label><br>
+            <input type="radio" id="jaminan_ktp" name="jaminan" value="1 KTP" required>
+            <label for="jaminan_ktp">1 KTP</label><br>
+            <button type="submit" id="kirim">Kirim</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

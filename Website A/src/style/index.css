@@ -1,0 +1,184 @@
+/* nav */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: var(--basic);
+    border-bottom: .5px solid var(--grey);
+}
+
+nav a {
+    color: var(--dark);
+}
+
+nav .logo {
+    display: block;
+    padding: 1em 0;
+}
+
+nav .socmed {
+    gap: 1em;
+}
+
+nav .menu {
+    position: absolute;
+    top: 55px;
+    right: 5%;
+    z-index: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 200px;
+    border-radius: 10px;
+    background-color: var(--basic);
+    box-shadow: 0 8px 8px rgba(0,0,0,.2);
+    border: .5px solid var(--grey);
+    display: none;
+}
+
+nav .menu a {
+    display: block;
+    padding: 1em;
+}
+
+nav .menu.show {
+    display: block;
+}
+
+
+/* End nav */
+
+/* Jumbotron */
+
+#jumbotron {
+    height: 150px;
+
+    text-align: center;
+}
+
+#jumbotron .container {
+    justify-content: center;
+}
+
+/* End Jumbotron */
+
+/* List Villa */
+
+#villas, #vehicle {
+    padding: 2em 0;
+}
+
+#villas a {
+    color: var(--dark);
+}
+
+#villas .row {
+    margin: 1em 0;
+    gap: 1.5em;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+
+#villas .card {
+    min-width: 300px;
+    border-radius: 10px;
+}
+
+#villas .card h3 {
+    font-weight: 500;
+}
+
+#villas .card .img-slide {
+    height: 250px;
+    border-radius: 10px;
+    background-color: var(--grey);
+    overflow: hidden;
+    position: relative;
+}
+
+.card .img-slide img {
+    width: 100%;
+    height: 100%;
+}
+
+#villas .card .caption {
+    margin: .5em 0;
+    align-items: flex-start;
+}
+
+.card .caption .price-list {
+    color: #5c5c5c;
+    margin-top: 5px;
+}
+
+.card .caption span {
+    color: #5c5c5c;
+}
+
+.card .caption .max-pax {
+    justify-content: flex-start;
+    gap: 10px;
+    color: #5c5c5c;
+}
+
+/* End List Villa */
+
+/* Vehicle */
+
+#vehicle .row {
+    overflow-y: scroll;
+    margin: 1em 0;
+    justify-content: flex-start;
+    gap: 1em;
+    scroll-snap-type: x mandatory;
+    scroll-snap-align: left;
+    flex-wrap: nowrap;
+}
+
+#vehicle .card-vehicle {
+    flex: 0 0 250px;
+    
+}
+
+.card-vehicle .imgUnit {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 1em;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.card-vehicle .imgUnit img {
+    width: 100%;
+    height: 100%;
+}
+
+.card-vehicle .vehicle-capacity {
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.judul{
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.order-btn {
+    background-color: green; /* Warna Hijau */
+    color: white; /* Teks putih */
+    padding: 5px 10px; /* Padding untuk button */
+    border: none; /* Menghilangkan border */
+    border-radius: 5px; /* Membuat sudut button melengkung */
+    cursor: pointer; /* Menampilkan kursor pointer saat hover */
+    font-size: 15px;
+}
+
+.order-btn:hover {
+    background-color: darkgreen; /* Warna hijau lebih gelap saat hover */
+    
+}
+a{
+  color: white;
+ }
+/* End Vehicle */

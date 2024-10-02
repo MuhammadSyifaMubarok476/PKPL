@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Rental Mobil</title>
+    <link rel="stylesheet" href="styleR.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulir Rental Mobil</h1>
+        <h2>FunVilla Malang.com</h2>
+        <form id="rentalForm">
+            <label for="nama">Nama Lengkap (sesuai KTP):</label>
+            <input type="text" id="nama" name="nama" required><br>
+
+            <label for="alamat">Alamat Lengkap (sesuai KTP):</label>
+            <textarea id="alamat" name="alamat" rows="3" required></textarea><br>
+
+            <label for="no_hp">No HP (11-12 angka):</label>
+            <input type="text" id="no_hp" name="no_hp" pattern="\d{11,12}" required><br>
+
+            <label for="no_hp_darurat">No HP Darurat (11-12 angka):</label>
+            <input type="text" id="no_hp_darurat" name="no_hp_darurat" pattern="\d{11,12}" required><br>
+
+            <label for="email">Email (@gmail.com):</label>
+            <input type="email" id="email" name="email" pattern=".+@gmail\.com" required><br>
+
+            <label for="tujuan">Tujuan/Alasan Peminjaman Unit:</label>
+            <textarea id="tujuan" name="tujuan" rows="3" required></textarea><br>
+
+            <label for="mobil">Pilih Mobil:</label>
+            <select id="mobil" name="mobil" required>
+                <option value="" disabled selected>Pilih Mobil</option>
+                <option value="Hiace (Rp 1.000.000/hari, 15 Seater)">Hiace (Rp 1.000.000/hari, 15 Seater)</option>
+                <option value="Mobilio (Rp 350.000/hari, 7 Seater)">Mobilio (Rp 350.000/hari, 7 Seater)</option>
+                <option value="Avanza (Rp 325.000/hari, 7 Seater)">Avanza (Rp 325.000/hari, 7 Seater)</option>
+                <option value="Xenia (Rp 300.000/hari, 7 Seater)">Xenia (Rp 300.000/hari, 7 Seater)</option>
+                <option value="Brio (Rp 250.000/hari, 3 Seater)">Brio (Rp 250.000/hari, 3 Seater)</option>
+            </select><br>
+
+            <label for="lokasi">Lokasi Pengambilan Unit:</label>
+            <input type="text" id="lokasi" name="lokasi" required><br>
+
+            <label for="durasi">Durasi Sewa (1-5 hari):</label>
+            <input type="number" id="durasi" name="durasi" min="1" max="5" required><br>
+
+            <label for="tanggal_ambil">Tanggal Ambil:</label>
+            <input type="date" id="tanggal_ambil" name="tanggal_ambil" required><br>
+
+            <label for="jam_ambil">Jam Ambil:</label>
+            <input type="time" id="jam_ambil" name="jam_ambil" required><br>
+
+            <label for="tanggal_kembali">Tanggal Kembalikan:</label>
+            <input type="date" id="tanggal_kembali" name="tanggal_kembali" required><br>
+
+            <label for="jaminan">Pilih Jaminan:</label><br>
+            <input type="radio" id="jaminan_ktp" name="jaminan" value="2 KTP" required>
+            <label for="jaminan_ktp">2 KTP</label><br>
+            <input type="radio" id="jaminan_stnk" name="jaminan" value="2 STNK + Motor" required>
+            <label for="jaminan_stnk">2 STNK + Motor</label><br><br>
+
+            <button type="submit" id="kirim">Kirim</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
